@@ -1,4 +1,4 @@
-var Gnip = require('gnip'),
+HOMEvar Gnip = require('gnip'),
 	async = require('async');
 
 var stream = new Gnip.Stream({
@@ -15,6 +15,8 @@ stream.on('tweet', function(tweet) {
 stream.on('error', function(err) {
     console.error(err);
 });
+
+// stream.start();
 
 var rules = new Gnip.Rules({
     url : 'https://api.gnip.com:443/accounts/xxx/publishers/twitter/streams/track/dev/rules.json',
